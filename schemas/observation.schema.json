@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Lab observation",
+  "type": "object",
+  "required": ["schemaVersion", "observedAt", "profile", "visibleAchievements", "pullRequests"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "observedAt": { "type": "string", "format": "date-time" },
+    "profile": {
+      "type": "object",
+      "required": ["login", "url"],
+      "properties": {
+        "login": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri" }
+      }
+    },
+    "visibleAchievements": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "pullRequests": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["url", "author", "merged", "mergedBy", "mergedAt"],
+        "properties": {
+          "url": { "type": "string", "pattern": "^https://github\\.com/[^/]+/[^/]+/pull/[1-9][0-9]*$" },
+          "author": { "type": "string", "minLength": 1 },
+          "merged": { "type": "boolean" },
+          "mergedBy": { "type": ["string", "null"] },
+          "mergedAt": { "type": ["string", "null"], "format": "date-time" }
+        }
+      }
+    },
+    "notes": { "type": "string" }
+  }
+}
