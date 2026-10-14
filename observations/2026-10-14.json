@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-10-14T03:42:28.614Z",
+  "profile": {
+    "login": "Alice699",
+    "url": "https://github.com/Alice699"
+  },
+  "visibleAchievements": [
+    "Quickdraw",
+    "YOLO"
+  ],
+  "pullRequests": [
+    {
+      "url": "https://github.com/biawakLahat/pull-request-lab/pull/1",
+      "author": "Alice699",
+      "merged": true,
+      "mergedBy": "biawakLahat",
+      "mergedAt": "2026-10-10T05:07:21Z"
+    },
+    {
+      "url": "https://github.com/biawakLahat/pull-request-lab/pull/2",
+      "author": "Alice699",
+      "merged": true,
+      "mergedBy": "biawakLahat",
+      "mergedAt": "2026-10-10T05:21:47Z"
+    }
+  ],
+  "notes": "This records public PR status and visible profile achievements. GitHub internal eligibility and award records were not checked."
+}
