@@ -1,0 +1,36 @@
+name: Documentation problem
+description: Report an unclear instruction, broken link, or incorrect statement in the lab.
+title: "docs: "
+body:
+  - type: input
+    id: location
+    attributes:
+      label: File or section
+      description: Give the repository path or a link to the affected section.
+      placeholder: docs/pull-request-workflow.md
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is incorrect or unclear?
+      description: Explain what happened when following the instruction, or identify the statement that needs correction.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+      description: Describe the information or behavior you expected.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and environment
+      description: Include relevant PR links, dates, error text, and Git or operating-system versions. Remove credentials and private account data.
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested correction
+      description: Optional proposed wording or steps to resolve the problem.
